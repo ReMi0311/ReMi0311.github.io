@@ -150,87 +150,241 @@
     </section>
 
     <!-- Projects -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Featured Projects</p>
-          <h2>Selected work and systems.</h2>
-        </div>
+   <!-- Projects -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Featured Projects</p>
+      <h2>Selected work and systems.</h2>
+    </div>
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-image">
-              <img src="assets/inventory-system.png" alt="Inventory and POS system screenshot">
-            </div>
+    <div class="project-tabs" data-project-tabs>
+      <div class="project-tab-list" role="tablist" aria-label="Featured project tabs">
+        <button 
+          class="project-tab active" 
+          type="button" 
+          role="tab"
+          aria-selected="true"
+          data-tab="wordpress"
+        >
+          WordPress
+        </button>
 
-            <div class="project-content">
-              <h3>Inventory / POS / Supplier Credit System</h3>
-              <p>
-                A local inventory, POS, supplier credit, and cash monitoring system built for a hardware and construction supplies business. 
-                The system includes role-based access, product management, sales, credit sales, delivery receipts, supplier balances, 
-                cash tracking, stock reports, attendance, and audit logs.
-              </p>
+        <button 
+          class="project-tab" 
+          type="button" 
+          role="tab"
+          aria-selected="false"
+          data-tab="inventory"
+        >
+          Flask System
+        </button>
 
-              <ul class="project-features">
-                <li>Role-based access for admin, junior admin, employees, management, and staff</li>
-                <li>Inventory, POS, credit sales, supplier purchases, and cash monitoring</li>
-                <li>Responsive Bootstrap interface with audit logging and stock reporting</li>
-              </ul>
+        <button 
+          class="project-tab" 
+          type="button" 
+          role="tab"
+          aria-selected="false"
+          data-tab="automation"
+        >
+          Automation & SEO
+        </button>
+      </div>
 
-              <div class="project-tags">
-                <span>Flask</span>
-                <span>SQLite</span>
-                <span>Bootstrap</span>
-                <span>SQLAlchemy</span>
+      <!-- WordPress Tab - Main Default Tab -->
+      <article class="project-panel active" data-panel="wordpress" role="tabpanel">
+        <div class="tab-project-layout">
+          <div class="tab-project-media is-wordpress">
+            <span>WordPress Development</span>
+          </div>
+
+          <div class="tab-project-details">
+            <p class="project-kicker">Main Focus</p>
+            <h3>WordPress Website Development & Maintenance</h3>
+
+            <p>
+              Worked on WordPress websites involving page building, maintenance, responsive fixes,
+              front-end customization, plugin support, performance improvements, and technical website support.
+              I have experience using popular page builders and handling website updates based on client or business needs.
+            </p>
+
+            <div class="project-stats">
+              <div>
+                <strong>2+ Years</strong>
+                <span>WordPress Experience</span>
               </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image">
-              <span>WordPress</span>
-            </div>
-
-            <div class="project-content">
-              <h3>WordPress Website Development & Maintenance</h3>
-              <p>
-                WordPress website updates, page building, front-end adjustments, plugin support,
-                responsive fixes, and maintenance using tools such as Divi, Elementor, WPBakery,
-                and Beaver Builder.
-              </p>
-
-              <div class="project-tags">
-                <span>WordPress</span>
-                <span>PHP</span>
-                <span>CSS</span>
+              <div>
+                <strong>Multiple</strong>
                 <span>Page Builders</span>
               </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image">
-              <span>Automation</span>
-            </div>
-
-            <div class="project-content">
-              <h3>Automation, SEO & Performance Support</h3>
-              <p>
-                Website support involving basic SEO, PageSpeed improvements, workflow automation,
-                CRM integrations, and technical troubleshooting using tools like Zapier and GoHighLevel.
-              </p>
-
-              <div class="project-tags">
-                <span>Zapier</span>
-                <span>GoHighLevel</span>
-                <span>SEO</span>
-                <span>PageSpeed</span>
+              <div>
+                <strong>Responsive</strong>
+                <span>Website Fixes</span>
               </div>
             </div>
-          </article>
+
+            <div class="project-columns">
+              <div>
+                <h4>Work Handled</h4>
+                <ul class="project-features">
+                  <li>Website maintenance and page updates</li>
+                  <li>Responsive layout fixes for desktop and mobile</li>
+                  <li>Front-end customization using HTML, CSS, JavaScript, PHP, and jQuery</li>
+                  <li>Basic SEO, PageSpeed, and plugin troubleshooting support</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4>Tools Used</h4>
+                <ul class="project-features">
+                  <li>WordPress, Divi, Elementor, WPBakery, and Beaver Builder</li>
+                  <li>HTML, CSS, JavaScript, PHP, and jQuery</li>
+                  <li>SEO tools, PageSpeed testing, Zapier, and GoHighLevel</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span>WordPress</span>
+              <span>PHP</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Divi</span>
+              <span>Elementor</span>
+              <span>WPBakery</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </article>
+
+      <!-- Inventory / Flask System Tab -->
+      <article class="project-panel" data-panel="inventory" role="tabpanel">
+        <div class="tab-project-layout">
+          <div class="tab-project-media">
+            <img src="assets/inventory-system.png" alt="Inventory and POS system screenshot">
+          </div>
+
+          <div class="tab-project-details">
+            <p class="project-kicker">Custom Business System</p>
+            <h3>Inventory / POS / Supplier Credit System</h3>
+
+            <p>
+              A local inventory, POS, supplier credit, and cash monitoring system built for a hardware
+              and construction supplies business. The system helps manage products, sales, credit sales,
+              delivery receipts, supplier balances, cash tracking, stock reports, attendance, and audit logs.
+            </p>
+
+            <div class="project-stats">
+              <div>
+                <strong>Flask</strong>
+                <span>Backend</span>
+              </div>
+              <div>
+                <strong>SQLite</strong>
+                <span>Database</span>
+              </div>
+              <div>
+                <strong>Role-Based</strong>
+                <span>Access Control</span>
+              </div>
+            </div>
+
+            <div class="project-columns">
+              <div>
+                <h4>Core Features</h4>
+                <ul class="project-features">
+                  <li>Product, inventory, sales, and credit sales management</li>
+                  <li>Supplier credit purchases, delivery receipts, and payable tracking</li>
+                  <li>Cash dashboard, expenses, stock reports, attendance, and audit logs</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4>Technical Details</h4>
+                <ul class="project-features">
+                  <li>Built with Flask, SQLAlchemy, SQLite, Jinja2, and Bootstrap</li>
+                  <li>Responsive interface for admin, junior admin, employees, management, and staff</li>
+                  <li>Designed for local business operations and daily transaction tracking</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span>Flask</span>
+              <span>Python</span>
+              <span>SQLite</span>
+              <span>SQLAlchemy</span>
+              <span>Bootstrap</span>
+              <span>Jinja2</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Automation / SEO Tab -->
+      <article class="project-panel" data-panel="automation" role="tabpanel">
+        <div class="tab-project-layout">
+          <div class="tab-project-media is-automation">
+            <span>Automation & Performance</span>
+          </div>
+
+          <div class="tab-project-details">
+            <p class="project-kicker">Website Support</p>
+            <h3>Automation, SEO & Performance Support</h3>
+
+            <p>
+              Provided technical website support involving basic SEO improvements, PageSpeed optimization,
+              workflow automation, CRM-related tasks, and troubleshooting for website and marketing workflows.
+            </p>
+
+            <div class="project-stats">
+              <div>
+                <strong>SEO</strong>
+                <span>Basic Optimization</span>
+              </div>
+              <div>
+                <strong>PageSpeed</strong>
+                <span>Performance Support</span>
+              </div>
+              <div>
+                <strong>Automation</strong>
+                <span>Workflow Support</span>
+              </div>
+            </div>
+
+            <div class="project-columns">
+              <div>
+                <h4>Work Handled</h4>
+                <ul class="project-features">
+                  <li>Basic SEO updates and website content support</li>
+                  <li>PageSpeed checks and performance-related improvements</li>
+                  <li>Automation support using tools like Zapier and GoHighLevel</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4>Value Provided</h4>
+                <ul class="project-features">
+                  <li>Improved website usability and maintenance workflows</li>
+                  <li>Helped streamline repetitive technical tasks</li>
+                  <li>Supported website reliability, speed, and marketing operations</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span>Zapier</span>
+              <span>GoHighLevel</span>
+              <span>SEO</span>
+              <span>PageSpeed</span>
+              <span>WordPress Support</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
     <!-- Experience -->
     <section class="section section-muted" id="experience">
