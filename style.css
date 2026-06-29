@@ -481,7 +481,7 @@ a {
     max-width: 520px;
   }
 
-  .profile-placeholder {
+  .profile-photo-wrap {
     height: 260px;
   }
 }
@@ -521,7 +521,7 @@ a {
     padding: 22px;
   }
 
-  .profile-placeholder {
+  .profile-photo-wrap {
     height: 220px;
   }
 }
