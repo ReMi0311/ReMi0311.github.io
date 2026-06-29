@@ -3,10 +3,267 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ren Mikel Tubio | Portfolio</title>
+
+  <title>Ren Mikel K. Tubio | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" 
+    rel="stylesheet"
+  >
 </head>
 <body>
-  <h1>Ren Mikel Tubio</h1>
-  <p>Web Developer / WordPress Developer / Flask System Developer</p>
+
+  <!-- Navbar -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">Ren Mikel</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Web Developer / WordPress Developer / Flask System Developer</p>
+
+          <h1>
+            Hi, I’m <span>Ren Mikel K. Tubio</span>.
+            I build clean, responsive, and functional web systems.
+          </h1>
+
+          <p class="hero-text">
+            I specialize in WordPress development, website maintenance, front-end implementation,
+            and Flask-based business systems such as inventory, POS, supplier credit, and cash monitoring tools.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="profile-placeholder">
+            <span>RT</span>
+          </div>
+
+          <div class="hero-card-content">
+            <h2>Portfolio Highlights</h2>
+            <p>WordPress • Flask • Bootstrap • SQLAlchemy • SEO • PageSpeed • Automation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">About Me</p>
+          <h2>Developer focused on practical business solutions.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Who I Am</h3>
+            <p>
+              I’m a web developer with experience in WordPress development, website maintenance,
+              front-end customization, and building local business systems using Flask, SQLite,
+              Bootstrap, and Python.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>What I Build</h3>
+            <p>
+              I create responsive websites, maintain WordPress sites, improve website performance,
+              and develop internal tools such as inventory systems, POS workflows, supplier credit tracking,
+              audit logs, cash dashboards, and employee management features.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section-muted" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Skills</p>
+          <h2>Technologies and tools I work with.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card">HTML</div>
+          <div class="skill-card">CSS</div>
+          <div class="skill-card">JavaScript</div>
+          <div class="skill-card">PHP</div>
+          <div class="skill-card">WordPress</div>
+          <div class="skill-card">Divi</div>
+          <div class="skill-card">Elementor</div>
+          <div class="skill-card">WPBakery</div>
+          <div class="skill-card">Python</div>
+          <div class="skill-card">Flask</div>
+          <div class="skill-card">SQLAlchemy</div>
+          <div class="skill-card">SQLite</div>
+          <div class="skill-card">Bootstrap</div>
+          <div class="skill-card">GitHub</div>
+          <div class="skill-card">SEO Basics</div>
+          <div class="skill-card">PageSpeed</div>
+          <div class="skill-card">Zapier</div>
+          <div class="skill-card">GoHighLevel</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Featured Projects</p>
+          <h2>Selected work and systems.</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image">
+              <span>Inventory System</span>
+            </div>
+
+            <div class="project-content">
+              <h3>Inventory / POS / Supplier Credit System</h3>
+              <p>
+                A local business management system built with Flask, SQLAlchemy, SQLite, and Bootstrap.
+                Includes product management, sales, credit sales, supplier purchases, cash dashboard,
+                audit logs, stock reports, and role-based access.
+              </p>
+
+              <div class="project-tags">
+                <span>Flask</span>
+                <span>SQLite</span>
+                <span>Bootstrap</span>
+                <span>SQLAlchemy</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <span>WordPress</span>
+            </div>
+
+            <div class="project-content">
+              <h3>WordPress Website Development & Maintenance</h3>
+              <p>
+                WordPress website updates, page building, front-end adjustments, plugin support,
+                responsive fixes, and maintenance using tools such as Divi, Elementor, WPBakery,
+                and Beaver Builder.
+              </p>
+
+              <div class="project-tags">
+                <span>WordPress</span>
+                <span>PHP</span>
+                <span>CSS</span>
+                <span>Page Builders</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <span>Automation</span>
+            </div>
+
+            <div class="project-content">
+              <h3>Automation, SEO & Performance Support</h3>
+              <p>
+                Website support involving basic SEO, PageSpeed improvements, workflow automation,
+                CRM integrations, and technical troubleshooting using tools like Zapier and GoHighLevel.
+              </p>
+
+              <div class="project-tags">
+                <span>Zapier</span>
+                <span>GoHighLevel</span>
+                <span>SEO</span>
+                <span>PageSpeed</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section section-muted" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>Professional background.</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+              <h3>Sites at Scale, Inc.</h3>
+              <p class="timeline-role">Web Developer / Technician / Lead Developer</p>
+              <p>
+                Worked on WordPress development, website maintenance, technical support,
+                front-end updates, performance improvements, and internal web development tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s work together.</h2>
+          <p>
+            Feel free to reach out for web development, WordPress support, website maintenance,
+            or custom business system projects.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <a href="mailto:your.email@example.com">your.email@example.com</a>
+          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+          <a href="#" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Ren Mikel K. Tubio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
