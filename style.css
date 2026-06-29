@@ -848,3 +848,36 @@ a {
     height: 220px;
   }
 }
+
+
+/* Fix: gallery is now the left grid item directly */
+.tab-project-layout > .project-gallery {
+  align-self: center;
+  min-width: 0;
+}
+
+.tab-project-layout > .tab-project-details {
+  min-width: 0;
+}
+
+/* Make screenshot galleries cleaner on wide screens */
+.gallery-stage {
+  width: 100%;
+}
+
+.gallery-slides {
+  min-height: 300px;
+}
+
+/* Prevent very long text from pushing the layout wider */
+.tab-project-details h3,
+.tab-project-details p,
+.project-features li {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .tab-project-layout > .project-gallery {
+    align-self: stretch;
+  }
+}

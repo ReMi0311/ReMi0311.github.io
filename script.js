@@ -2,21 +2,24 @@ const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 const year = document.getElementById("year");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
   });
-});
 
-year.textContent = new Date().getFullYear();
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+    });
+  });
+}
 
-const projectTabs = document.querySelectorAll("[data-project-tabs]");
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
 
-projectTabs.forEach((tabsWrapper) => {
+/* Project tabs */
+document.querySelectorAll("[data-project-tabs]").forEach((tabsWrapper) => {
   const tabs = tabsWrapper.querySelectorAll("[data-tab]");
   const panels = tabsWrapper.querySelectorAll("[data-panel]");
 
@@ -37,7 +40,6 @@ projectTabs.forEach((tabsWrapper) => {
       tab.setAttribute("aria-selected", "true");
 
       const activePanel = tabsWrapper.querySelector(`[data-panel="${selectedTab}"]`);
-
       if (activePanel) {
         activePanel.classList.add("active");
       }
@@ -45,19 +47,18 @@ projectTabs.forEach((tabsWrapper) => {
   });
 });
 
-const galleries = document.querySelectorAll("[data-gallery]");
-
-galleries.forEach((gallery) => {
+/* Screenshot galleries */
+document.querySelectorAll("[data-gallery]").forEach((gallery) => {
   const slides = gallery.querySelectorAll(".gallery-slide");
   const dots = gallery.querySelectorAll(".gallery-dots button");
   const prevButton = gallery.querySelector(".gallery-prev");
   const nextButton = gallery.querySelector(".gallery-next");
 
+  if (!slides.length || !prevButton || !nextButton) return;
+
   let currentIndex = 0;
 
   const showSlide = (index) => {
-    if (!slides.length) return;
-
     currentIndex = (index + slides.length) % slides.length;
 
     slides.forEach((slide, slideIndex) => {
