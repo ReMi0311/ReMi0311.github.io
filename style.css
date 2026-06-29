@@ -208,21 +208,19 @@ a {
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
 }
 
-.profile-placeholder {
+.profile-photo-wrap {
   height: 320px;
   border-radius: 20px;
-  background:
-    linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(14, 165, 233, 0.7)),
-    #2563eb;
-  display: grid;
-  place-items: center;
+  overflow: hidden;
   margin-bottom: 22px;
+  background: #1e293b;
 }
 
-.profile-placeholder span {
-  font-size: 5rem;
-  font-weight: 900;
-  letter-spacing: -0.08em;
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-card h2 {
