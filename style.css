@@ -329,6 +329,16 @@ a {
   margin-bottom: 18px;
 }
 
+.project-features {
+  margin: 0 0 18px 18px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.project-features li {
+  margin-bottom: 8px;
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
