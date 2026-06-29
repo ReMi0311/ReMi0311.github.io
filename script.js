@@ -44,3 +44,42 @@ projectTabs.forEach((tabsWrapper) => {
     });
   });
 });
+
+const galleries = document.querySelectorAll("[data-gallery]");
+
+galleries.forEach((gallery) => {
+  const slides = gallery.querySelectorAll(".gallery-slide");
+  const dots = gallery.querySelectorAll(".gallery-dots button");
+  const prevButton = gallery.querySelector(".gallery-prev");
+  const nextButton = gallery.querySelector(".gallery-next");
+
+  let currentIndex = 0;
+
+  const showSlide = (index) => {
+    if (!slides.length) return;
+
+    currentIndex = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("active", slideIndex === currentIndex);
+    });
+
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("active", dotIndex === currentIndex);
+    });
+  };
+
+  prevButton.addEventListener("click", () => {
+    showSlide(currentIndex - 1);
+  });
+
+  nextButton.addEventListener("click", () => {
+    showSlide(currentIndex + 1);
+  });
+
+  dots.forEach((dot, dotIndex) => {
+    dot.addEventListener("click", () => {
+      showSlide(dotIndex);
+    });
+  });
+});
