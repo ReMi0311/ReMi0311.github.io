@@ -1853,3 +1853,69 @@ section {
     object-position: 100% 25%!important;
 }
 }
+
+.contact-card {
+  background: white;
+  border-radius: 28px;
+  padding: 28px;
+  display: grid;
+  gap: 16px;
+}
+
+.contact-link {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  color: var(--accent);
+  font-weight: 900;
+  padding: 16px 18px;
+  background: #eff6ff;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  transition: 0.2s ease;
+}
+
+.contact-link:hover {
+  background: #dbeafe;
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.12);
+}
+
+.contact-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--accent);
+}
+
+.contact-arrow {
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+@media (max-width: 560px) {
+  .contact-card {
+    padding: 22px;
+  }
+
+  .contact-link {
+    grid-template-columns: 40px 1fr auto;
+    padding: 14px;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
