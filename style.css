@@ -1406,3 +1406,245 @@ a {
     letter-spacing: -0.045em;
   }
 }
+
+/* ================================
+   Final Mobile Polish Fixes
+   ================================ */
+
+/* Prevent accidental horizontal overflow */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Mobile spacing improvements */
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .section {
+    padding: 58px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(2rem, 10vw, 2.65rem);
+    line-height: 1.08;
+  }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+}
+
+/* Fix mobile navbar Contact button */
+@media (max-width: 900px) {
+  .nav-links {
+    padding: 20px 18px 22px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    display: block;
+    padding: 14px 0;
+  }
+
+  .nav-links .nav-cta {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 0;
+    padding: 14px 18px !important;
+    border-radius: 999px;
+    background: var(--accent);
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+/* Better project tab behavior on mobile */
+@media (max-width: 640px) {
+  .project-tabs {
+    border-radius: 22px;
+    overflow: hidden;
+  }
+
+  .project-tab-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .project-tab-list::-webkit-scrollbar {
+    height: 0;
+  }
+
+  .project-tab {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .project-panel {
+    padding: 20px;
+  }
+
+  .tab-project-layout {
+    gap: 22px;
+  }
+
+  .project-stats {
+    gap: 14px;
+  }
+
+  .project-columns {
+    gap: 14px;
+  }
+
+  .project-columns > div {
+    padding: 20px;
+  }
+
+  .project-tags {
+    gap: 8px;
+  }
+}
+
+/* Keep carousel arrows visible on all tabs */
+.gallery-stage {
+  isolation: isolate;
+}
+
+.gallery-btn {
+  z-index: 30 !important;
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+
+.gallery-prev {
+  left: 14px;
+}
+
+.gallery-next {
+  right: 14px;
+}
+
+@media (max-width: 640px) {
+  .gallery-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.7rem;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.26);
+  }
+
+  .gallery-prev {
+    left: 10px;
+  }
+
+  .gallery-next {
+    right: 10px;
+  }
+
+  .gallery-dots {
+    margin-top: 12px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Make all carousel captions consistent */
+.gallery-slide figcaption,
+.project-panel[data-panel="automation"] .gallery-slide figcaption,
+.project-panel[data-panel="inventory"] .gallery-slide figcaption {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 58px;
+  padding: 16px 20px;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.25;
+  background: linear-gradient(
+    to top,
+    rgba(2, 6, 23, 0.96),
+    rgba(2, 6, 23, 0.68),
+    rgba(2, 6, 23, 0)
+  ) !important;
+}
+
+.gallery-slide figcaption span {
+  width: auto;
+  text-align: left;
+}
+
+.gallery-slide figcaption a {
+  width: auto !important;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left !important;
+}
+
+/* Fix Automation caption alignment specifically */
+.project-panel[data-panel="automation"] .gallery-slide figcaption {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+@media (max-width: 640px) {
+  .gallery-slide figcaption,
+  .project-panel[data-panel="automation"] .gallery-slide figcaption,
+  .project-panel[data-panel="inventory"] .gallery-slide figcaption {
+    min-height: 50px;
+    padding: 13px 15px;
+    font-size: 0.82rem;
+  }
+
+  .gallery-slide figcaption a {
+    padding: 7px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* More comfortable mobile project text */
+@media (max-width: 640px) {
+  .tab-project-details h3 {
+    font-size: 1.85rem;
+    line-height: 1.08;
+  }
+
+  .tab-project-details p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .project-features {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+}
