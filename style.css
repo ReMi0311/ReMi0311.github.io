@@ -661,7 +661,7 @@ a {
 
 /* Timeline */
 .timeline {
-  max-width: 840px;
+  max-width: unset;
 }
 
 .timeline-item {
@@ -1265,7 +1265,7 @@ a {
 
 /* Improved Experience Timeline */
 .timeline {
-  max-width: 980px;
+  max-width: unset!important;
   display: grid;
   gap: 26px;
   position: relative;
