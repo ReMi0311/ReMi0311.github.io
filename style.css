@@ -1648,3 +1648,137 @@ body {
     line-height: 1.65;
   }
 }
+
+/* =========================================
+   Tablet + Mobile Project Spacing Fix
+   Applies at 980px and below
+   ========================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+html {
+  scroll-padding-top: 90px;
+}
+
+@media (max-width: 980px) {
+  .project-panel {
+    padding: 28px;
+  }
+
+  .tab-project-layout {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  .tab-project-layout > .project-gallery {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    align-self: stretch !important;
+    margin-bottom: 4px;
+  }
+
+  .tab-project-details {
+    display: flex !important;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .tab-project-details > .project-kicker,
+  .tab-project-details > h3,
+  .tab-project-details > p,
+  .tab-project-details > p:not(.project-kicker) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    margin: 0 !important;
+  }
+
+  .tab-project-details > .project-kicker {
+    margin-bottom: -10px !important;
+  }
+
+  .tab-project-details > h3 {
+    margin-bottom: -4px !important;
+  }
+
+  .tab-project-details > p:not(.project-kicker) {
+    max-width: 720px;
+    line-height: 1.65;
+  }
+
+  .project-stats {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    margin: 4px 0 0 !important;
+    gap: 16px;
+  }
+
+  .project-columns {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    margin: 0 !important;
+    gap: 18px;
+  }
+
+  .project-tags {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    margin-top: 0;
+    padding-top: 0 !important;
+  }
+}
+
+/* Medium tablet layout */
+@media (min-width: 641px) and (max-width: 980px) {
+  .project-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 640px) {
+  .project-panel {
+    padding: 20px;
+  }
+
+  .tab-project-details {
+    gap: 20px;
+  }
+
+  .project-stats {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-columns {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-columns > div {
+    padding: 20px;
+  }
+
+  .project-tags {
+    margin-top: 2px;
+  }
+}
+
+/* Sticky mobile dropdown improvement */
+@media (max-width: 900px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+
+  .nav-links {
+    z-index: 9998;
+    box-shadow: 0 24px 60px rgba(2, 6, 23, 0.28);
+  }
+}
