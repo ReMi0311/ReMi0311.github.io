@@ -1187,3 +1187,222 @@ a {
     margin-top: 10px;
   }
 }
+/* Fix Flask System / Inventory gallery consistency */
+.project-panel[data-panel="inventory"] .project-gallery {
+  max-width: 100%;
+}
+
+.project-panel[data-panel="inventory"] .gallery-stage {
+  border-radius: 22px;
+  overflow: hidden;
+  background: #020617;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+}
+
+.project-panel[data-panel="inventory"] .gallery-slides {
+  aspect-ratio: 16 / 9;
+  min-height: unset;
+  height: auto;
+}
+
+.project-panel[data-panel="inventory"] .gallery-slide {
+  position: relative;
+  height: 100%;
+  background: #020617;
+}
+
+.project-panel[data-panel="inventory"] .gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center;
+  display: block;
+  background: #020617;
+}
+
+/* Make Flask caption match Automation */
+.project-panel[data-panel="inventory"] .gallery-slide figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 64px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  background: linear-gradient(
+    to top,
+    rgba(2, 6, 23, 0.95),
+    rgba(2, 6, 23, 0.72),
+    rgba(2, 6, 23, 0)
+  );
+}
+
+/* Match spacing with Automation tab */
+.project-panel[data-panel="inventory"] .tab-project-layout {
+  align-items: start;
+  row-gap: 30px;
+}
+
+.project-panel[data-panel="inventory"] .project-stats {
+  margin-top: 0;
+}
+
+/* Mobile fix */
+@media (max-width: 640px) {
+  .project-panel[data-panel="inventory"] .gallery-slide figcaption {
+    position: absolute;
+    min-height: auto;
+    padding: 14px 16px;
+    font-size: 0.86rem;
+  }
+}
+
+/* Improved Experience Timeline */
+.timeline {
+  max-width: 980px;
+  display: grid;
+  gap: 26px;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 22px;
+  bottom: 22px;
+  width: 2px;
+  background: #dbeafe;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 36px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #dbeafe;
+  z-index: 2;
+}
+
+.timeline-content {
+  padding: 30px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.timeline-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+  margin-bottom: 6px;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.timeline-role {
+  color: var(--accent);
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.timeline-date {
+  flex-shrink: 0;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.timeline-location {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.timeline-list {
+  margin-left: 18px;
+  color: var(--text-muted);
+}
+
+.timeline-list li {
+  margin-bottom: 10px;
+}
+
+.timeline-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Experience Timeline Responsive */
+@media (max-width: 700px) {
+  .timeline-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .timeline-date {
+    width: fit-content;
+  }
+
+  .timeline-content {
+    padding: 24px;
+  }
+}
+
+/* Better balanced hero heading */
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.7rem);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  max-width: 920px;
+}
+
+/* Keep the hero content from becoming too wide */
+.hero-content {
+  max-width: 900px;
+}
+
+/* Slightly tighten the hero layout */
+.hero-grid {
+  gap: 48px;
+}
+
+/* Better mobile sizing */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: clamp(2.35rem, 9vw, 4rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: 2.45rem;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+}
