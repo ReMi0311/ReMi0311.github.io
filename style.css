@@ -1782,3 +1782,56 @@ html {
     box-shadow: 0 24px 60px rgba(2, 6, 23, 0.28);
   }
 }
+
+/* =========================================
+   Force Fixed Header
+   More reliable than sticky
+   ========================================= */
+
+.site-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99999;
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Prevent content from hiding under the fixed header */
+main {
+  padding-top: 76px;
+}
+
+/* Make anchor jumps stop below the fixed header */
+section {
+  scroll-margin-top: 96px;
+}
+
+/* Keep mobile dropdown aligned below fixed header */
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed !important;
+    top: 76px;
+    left: 0;
+    right: 0;
+    z-index: 99998;
+  }
+}
+
+/* Mobile header height adjustment */
+@media (max-width: 560px) {
+  main {
+    padding-top: 68px;
+  }
+
+  section {
+    scroll-margin-top: 88px;
+  }
+
+  .nav-links {
+    top: 68px;
+  }
+}
