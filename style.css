@@ -1919,3 +1919,28 @@ section {
     height: 40px;
   }
 }
+
+.logo-brand {
+  display: inline-flex;
+  align-items: center;
+  height: 52px;
+}
+
+.logo-brand img {
+  display: block;
+  height: 42px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+@media (max-width: 560px) {
+  .logo-brand {
+    height: 44px;
+  }
+
+  .logo-brand img {
+    height: 36px;
+    max-width: 150px;
+  }
+}
