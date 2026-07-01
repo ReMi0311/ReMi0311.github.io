@@ -2010,3 +2010,12 @@ section {
     width: 100%;
   }
 }
+
+#about,
+#skills,
+#projects,
+#experience,
+#contact {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
+}
