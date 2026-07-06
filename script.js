@@ -18,7 +18,6 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-/* Project tabs */
 document.querySelectorAll("[data-project-tabs]").forEach((tabsWrapper) => {
   const tabs = tabsWrapper.querySelectorAll("[data-tab]");
   const panels = tabsWrapper.querySelectorAll("[data-panel]");
@@ -47,7 +46,6 @@ document.querySelectorAll("[data-project-tabs]").forEach((tabsWrapper) => {
   });
 });
 
-/* Screenshot galleries */
 document.querySelectorAll("[data-gallery]").forEach((gallery) => {
   const slides = gallery.querySelectorAll(".gallery-slide");
   const dots = gallery.querySelectorAll(".gallery-dots button");
