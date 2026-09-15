@@ -584,7 +584,7 @@ main {
 
 .case-media img {
   height: auto;
-  aspect-ratio: 1881 / 860;
+  aspect-ratio: 1885 / 863;
   object-fit: contain;
 }
 
@@ -636,6 +636,10 @@ main {
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   border-top: 1px solid var(--line-strong);
+}
+
+.case-metrics-two {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .case-metrics strong,
@@ -1107,8 +1111,7 @@ main {
     border-top: 1px solid var(--line);
   }
 
-  .gallery-stage,
-  .case-media img {
+  .gallery-stage {
     aspect-ratio: 16 / 11;
   }
 
